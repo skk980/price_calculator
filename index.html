@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+    <div class="main">
+      <h6 id="heading">Price Calculator</h6>
+      <span>Get Correct Material world things price or weight</span>
+
+      <div class="section">
+       <div class="inputfield">
+        <label>Total Price (MRP)</label>
+       <div class="flexbox">
+        <input id="mrp" type="number"/>
+        <select id="mrp_in_type">
+            <option value="kg">Kg</option>
+            <option value="gm">Gram</option>
+            <option value="mg">Milligram</option>
+        </select>
+       </div>
+       </div>
+
+       <div class="inputfield b_amount">
+        <label>Brought Amount</label>
+       <div class="flexbox">
+        <input id="b_amount" type="number"/>
+
+       </div>
+       </div>
+
+       <div class="inputfield">
+        <label>Brought Weight</label>
+       <div class="flexbox">
+        <input id="b_weight" type="number"/>
+        <select id="b_weight_in_type">
+            <option value="kg">Kg</option>
+            <option value="gm">Gram</option>
+            <option value="mg">Milligram</option>
+        </select>
+       </div>
+       </div>
+
+       <div class="inputfield">
+        <button id="submit">Submit</button>
+       </div>
+
+
+       <footer class="inputfield">
+        Thank you for using me  <span>❣</span> 
+       </footer>
+      </div>
+
+    </div>
+
+
+    
+
+<script src="https://cdn.jsdelivr.net/npm/material_world_things_price_calculator/index.js"></script>
+<script src="./index.js"></script>
+</body>
+</html>
