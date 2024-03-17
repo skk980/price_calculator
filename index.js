@@ -6,13 +6,25 @@ const b_weight = document.querySelector("#b_weight")
 const b_amount = document.querySelector("#b_amount")
 
 
+mrp.addEventListener('keydown',()=>{
+    b_amount.value = ""
+    b_weight.value = ""
+})
+
+mrp_in_type.addEventListener("change",()=>{
+    mrp.value = ""
+})
+
 b_weight.addEventListener('keydown',()=>{
+    if(mrp.value)
     b_amount.value = ""
 })
 b_amount.addEventListener('keydown',()=>{
+    if(mrp.value)
     b_weight.value = ""
 })
 b_weight_in_type.addEventListener("change",()=>{
+    if(mrp.value)
     b_weight.value = ""
 })
 
@@ -31,7 +43,11 @@ b_weight_in_type.addEventListener("change",()=>{
 //     });
 // });
 
-
+document.querySelector("#clear").addEventListener("click",()=>{
+    document.querySelectorAll('input').forEach(e => {
+        e.value = ""
+    })
+})
 
 document.querySelector("#submit").addEventListener("click",()=>{
 
@@ -43,13 +59,20 @@ document.querySelector("#submit").addEventListener("click",()=>{
             totalPriceInType:mrp_in_type.value,
             weighInType:b_weight_in_type.value
         })  // weight
-    }else{
+    }else if(!b_amount.value && b_weight.value){
         b_amount.value =  calculator({
             weight:b_weight.value,
             totalPrice:mrp.value,
             totalPriceInType:mrp_in_type.value,
             weighInType:b_weight_in_type.value
-        }) //price
+        }) //brought price
+    }else{
+        mrp.value = calculator({
+            weight:b_weight.value,
+            weighInType:b_weight_in_type.value,
+            broughtAmount:b_amount.value,
+            totalPriceInType:mrp_in_type.value,
+        }) //mrp price
     }
 
    
