@@ -17,6 +17,22 @@ b_weight_in_type.addEventListener("change",()=>{
 })
 
 
+// document.querySelectorAll('input').forEach(e => {
+//     e.addEventListener('focus', (ev) => {
+//         ev.preventDefault();
+//         document.querySelectorAll('.digit').forEach(btn => {
+//             btn.addEventListener('click', (ce) => {
+//                 if ([1, 2, 3, 4, 5, 6, 7, 8, 9, 0].includes(ce.target.textContent))
+//                     ev.target.value += ce.target.textContent;
+//                 if (ce.target.textContent === ".")
+//                     ev.target.value = ce.target.textContent;
+//             });
+//         });
+//     });
+// });
+
+
+
 document.querySelector("#submit").addEventListener("click",()=>{
 
 
